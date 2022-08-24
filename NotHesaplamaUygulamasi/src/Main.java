@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int matematik, fizik, kimya, biyoloji, turkce;
+        int matematik, fizik, kimya, biyoloji, turkce, tarih;
         Scanner input = new Scanner(System.in);
 
         try {
@@ -24,9 +24,12 @@ public class Main {
             System.out.print("Türkçe Ders Notunu giriniz: ");
             turkce = input.nextInt();
 
-            int toplam = (matematik + fizik + kimya + biyoloji + turkce);
+            System.out.print("Tarih Ders Notunu giriniz: ");
+            tarih = input.nextInt();
 
-            double ortalama = toplam / 5.0;
+            int toplam = (matematik + fizik + kimya + biyoloji + turkce + tarih);
+
+            double ortalama = toplam / 6.0;
 
             System.out.println("Ortalama : " + ortalama);
 
