@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int matematik, fizik, kimya, biyoloji, turkce, tarih;
+        int matematik, fizik, kimya, biyoloji, turkce, tarih, dersSayisi = 6;
         Scanner input = new Scanner(System.in);
 
         try {
@@ -11,25 +11,62 @@ public class Main {
 
             System.out.print("Matematik Ders Notunu giriniz: ");
             matematik = input.nextInt();
+            if (!(matematik >= 0 && matematik <= 100))
+            {
+                dersSayisi--;
+                matematik = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz matematik notu hesaplanmayacaktır." );
+            }
 
             System.out.print("Fizik Ders Notunu giriniz: ");
             fizik = input.nextInt();
+            if (!(fizik >= 0 && fizik <= 100))
+            {
+                dersSayisi--;
+                fizik = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz fizik notu hesaplanmayacaktır." );
+            }
 
             System.out.print("Kimya Ders Notunu giriniz: ");
             kimya = input.nextInt();
+             if (!(kimya >= 0 && kimya <= 100))
+            {
+                dersSayisi--;
+                kimya = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz kimya notu hesaplanmayacaktır." );
+            }
 
             System.out.print("Biyoloji Ders Notunu giriniz: ");
             biyoloji = input.nextInt();
+            if (!(biyoloji >= 0 && biyoloji <= 100))
+            {
+                dersSayisi--;
+                biyoloji = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz biyoloji notu hesaplanmayacaktır." );
+            }
 
             System.out.print("Türkçe Ders Notunu giriniz: ");
             turkce = input.nextInt();
+            if (!(turkce >= 0 && turkce <= 100))
+            {
+                dersSayisi--;
+                turkce = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz turkce notu hesaplanmayacaktır." );
+            }
 
             System.out.print("Tarih Ders Notunu giriniz: ");
             tarih = input.nextInt();
+            if (!(tarih >= 0 && tarih <= 100))
+            {
+                dersSayisi--;
+                tarih = 0;
+                System.out.println("0 ile 100 arasında bir değer girmediniz tarih notu hesaplanmayacaktır." );
+            }
 
-            int toplam = (matematik + fizik + kimya + biyoloji + turkce + tarih);
+            double toplam = matematik + fizik + kimya + biyoloji + turkce + tarih;
 
-            double ortalama = toplam / 6.0;
+
+            double ortalama = toplam / dersSayisi;
 
             System.out.println("Ortalama : " + ortalama);
 
