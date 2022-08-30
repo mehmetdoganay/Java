@@ -5,14 +5,17 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.printf("Sayı Giriniz: ");
-        int sayiMod,counter = 0, sayi =input.nextInt();
+        int sayiMod,sum = 0, sayi =input.nextInt();
 
         while( sayi > 0)
         {
             sayiMod = sayi % 10;
-            counter ++;
+
             sayi = sayi / 10;
+
+            sum = sum + sayiMod;
+
         }
-        System.out.println("Girilen Sayı " + counter + " basamaklıdır.");
+        System.out.println("Girilen Sayının rakamlar toplamı " + sum );
     }
 }
