@@ -18,7 +18,7 @@ public class Main {
             i--;
             result +=number;
         }
-        System.out.printf("Sonuç: " + result);
+        System.out.println("Sonuç: " + result);
     }
 
     static  void minus()
