@@ -27,5 +27,13 @@ public class Main {
         bmw.increasePrice(40000);
         // bmwnin fiyat niteliğini daha önce tanımlanan metod ile 40 bin tl yükselttim.
         System.out.println(bmw.model + " New Price " + bmw.price);
+
+        Computer hp = new Computer("y model ","x model","intel i5");
+        // burada metodda değerleri girdik.
+
+
+
+
     }
+
 }
