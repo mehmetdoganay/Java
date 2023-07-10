@@ -1,18 +1,33 @@
-// Bu class örneğinde constructor metodları kullacağız.
+// Bu class örneğinde constructor metodları kullanacağız.
 class Computer {
-    String cpu = "AMD 5500H";
+    String cpu;
     String gpu;
-    String motherboard = "MSI abc"; // Varsayılan değer.
-    String ram = "GeForce xyz"; // Varsayılan değer.
+    String motherboard ;
+    String ram ;
 
     // Burada bir metod oluşturduk (Kurucu metod)
-    Computer(String motherboard, String ram, String cpu)
+    Computer(String motherboard, String ram, String cpu, String gpu)
     {
+        this.cpu = "AMD 5500H"; // Varsayılan değer.
+        this.gpu = "GTX 4090"; // Varsayılan değer.
+        this.motherboard = "MSI abc"; // Varsayılan değer.
+        this.ram = "GeForce xyz"; // Varsayılan değer.
+        // classın nitelikleri olan bu 4 değeri kurucu metod içerisinde this anahtar kelimesi ile varsayılan bir değer Ataması yaptık.
+        // Bu atama class için tanımlarkende yapılabilirdi ama bu işemlere varsayılan değer ataması kurucu metod üzerinden yukarıdaki gibi yapılır.
+
         //Bu kurucu metodun içine Computer Classına ait 2 niteliğini aynı tür ve isimde verdim.
         //İsimlendirme aynı isimde yapılır.
-        System.out.println(motherboard + ram);
-        System.out.println(cpu); // Burada girilen parametre değerini yazdırır.
-        System.out.println(this.cpu); // this kullanılırsa bu yerelde classın içinde tanımlanan varsayılan değeri gösterir.
+    }
 
+    Computer(){
+        System.out.println("Boş kurucu metot");
+    }
+
+    void printInfo()
+    {
+        System.out.println("Ram: \t" + this.ram);
+        System.out.println("Motherbord: \t" + this.motherboard);
+        System.out.println("CPU: \t" + this.cpu);
+        System.out.println("GPU: \t" + this.gpu);
     }
 }

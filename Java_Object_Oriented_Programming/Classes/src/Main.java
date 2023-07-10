@@ -28,12 +28,9 @@ public class Main {
         // bmwnin fiyat niteliğini daha önce tanımlanan metod ile 40 bin tl yükselttim.
         System.out.println(bmw.model + " New Price " + bmw.price);
 
-        Computer hp = new Computer("y model ","x model","intel i5");
-        // burada metodda değerleri girdik.
+        Computer hp = new Computer("y model ","x model","intel i5","GTX 1650 TI");
+        // burada değerleri girdik.
 
-
-
-
+        Computer asus = new Computer(); // Boş kurucu metot oluşuturarak da bir nesne oluşturabiliriz.
     }
-
 }
