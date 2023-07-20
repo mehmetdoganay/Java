@@ -11,10 +11,10 @@ public class Main {
         fizik.addTeacher(t1);
         mat.addTeacher(t3);
 
-        Student s1 = new Student("Ali","556","4",tarih,fizik,mat);
-        Student s2 = new Student("Kemal","442","4",tarih,fizik,mat);
-        Student s3 = new Student("Mustafa","542","4",tarih,fizik,mat);
-        Student s4 = new Student("Ayse","864","2",tarih,fizik,mat);
+        Student s1 = new Student("Ali","556",4,tarih,fizik,mat);
+        Student s2 = new Student("Kemal","442",8,tarih,fizik,mat);
+        Student s3 = new Student("Mustafa","542",1,tarih,fizik,mat);
+        Student s4 = new Student("Ayse","864",2,tarih,fizik,mat);
         s1.addBulkVerbalGrade(66,70,90);
         s1.addBulkExamNote(32,44,66);
         s1.calcAvarage();
