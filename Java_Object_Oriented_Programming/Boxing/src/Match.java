@@ -30,7 +30,7 @@ public class Match {
             while (!isWin())
             {
                 boolean punch = random.nextBoolean();
-                int hit = random.nextInt(20);
+                int hit = random.nextInt(50);
 
                 System.out.println(this.f1.name+ " is health: \t" + this.f1.health);
                 System.out.println(this.f2.name + " is health: \t"+this.f2.health);
@@ -38,12 +38,14 @@ public class Match {
                 if(punch)
                 {
                     System.out.println("********* Attack From: \t" + this.f1.name + "\t +" + hit + " ! *********");
+                    isCriticalAttack(hit);
                     this.f2.health -= hit;
                     System.out.println( this.f2.name + " health: \t" + this.f2.health + " !");
                 }
                 else
                 {
                     System.out.println("********* Attack From: \t"  + this.f2.name + "\t +" + hit + " !");
+                    isCriticalAttack(hit);
                     this.f1.health -= hit;
                     System.out.println(this.f1.name + " health: \t" + this.f1.health + " ! *********");
                 }
@@ -60,6 +62,18 @@ public class Match {
 
     void time() throws InterruptedException {
         Thread.sleep(1000);
+    }
+
+    boolean isCriticalAttack(int attack)
+    {
+        if(attack > 40)
+        {
+            System.out.println("Critical Attack !!!");
+            return true;
+        }
+        else
+            return false;
+
     }
     boolean isWin()
     {
