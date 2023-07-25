@@ -12,7 +12,7 @@ public class Main {
         return false;
     }
     public static void main(String[] args) {
-        int[] list = {3,7,3,3,2,9,10,21,1,33,9,1};
+        int[] list = {3,7,0,3,10,22,3,2,9,10,18,6,21,1,33,9,1,2,18};
         int[] newList = new int[list.length];
         int counter = 0;
 
@@ -30,10 +30,10 @@ public class Main {
                 }
             }
         }
-        System.out.print("Tekrar Eden sayılar: " );
+        System.out.print("Tekrar Eden sayılar çift sayılar:  " );
         for(int value : newList)
         {
-            if(value != 0)
+            if((value != 0) && (value % 2 == 0))
             {
                 System.out.print( value + " ");
             }
