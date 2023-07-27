@@ -20,10 +20,7 @@ public class Main {
         }
         for(Map.Entry<Integer,Integer> entry : frequencyMap.entrySet())
         {
-            if(entry.getValue() > 1)
-            {
-                System.out.println(frequencyMap.containsKey() + " Sayısı " + entry.getValue() + "kez tekrar edmiştir.");
-            }
+                System.out.println( entry.getKey() + " sayısı " + entry.getValue() + " kez tekrar edmiştir.");
         }
     }
 
