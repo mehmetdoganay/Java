@@ -23,13 +23,99 @@ public class MineSweeper {
 
         calField();
         calMine();
+        for(int i = 0; i < this.col; i++)
+        {
+            for(int j = 0; j < this.row; j++)
+            {
+                System.out.print(" " + mine[i][j] + " ");
+            }
+            System.out.println();
+        }
 
         System.out.println("Mayın Tarlası oyununa hoş gelidiniz.");
+
+        for(int i = 0 ; i <= this.col -1; i++)
+        {
+            for(int j = 0 ; j <= this.row -1; j++)
+            {
+                if(mine[i][j] == -1)
+                {
+                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
+                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
+                        {
+                            if (mine[k][t] != -1) {
+                                mine[k][t] = 1;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
 
         for(int i = 0; i < this.col; i++)
         {
             for(int j = 0; j < this.row; j++)
             {
+
+                System.out.print(" " + mine[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        for(int i = 0 ; i <= this.col -1; i++)
+        {
+            for(int j = 0 ; j <= this.row -1; j++)
+            {
+                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
+                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
+                        {
+                            if (mine[k][t] != -1) {
+                                mine[k][t] = 0;
+                            }
+                        }
+                    }
+            }
+        }
+
+        for(int i = 0 ; i <= this.col -1; i++)
+        {
+            for(int j = 0 ; j <= this.row -1; j++)
+            {
+                if(mine[i][j] == -1)
+                {
+                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
+                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
+                        {
+                            if (mine[k][t] != -1) {
+                                mine[k][t] ++;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        for(int i = 0; i < this.col; i++)
+        {
+            for(int j = 0; j < this.row; j++)
+            {
+                System.out.print(" " + mine[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+
+
+
+        for(int i = 0; i < this.col; i++)
+        {
+            for(int j = 0; j < this.row; j++)
+            {
+
                 if (mine[i][j] == -1)
                 {
                     System.out.print(" " + mine[i][j] + " ");
@@ -41,27 +127,8 @@ public class MineSweeper {
             System.out.println();
         }
 
-        for(int i = 0 ; i <= this.col ; i++)
-        {
-            for(int j = 0 ; j <= this.row ; j++)
-            {
-
-                if(mine[i][j] == -1)
-                {
-                    for(int k = i -1; i <= i + 1; i++)
-                    {
-                        for(int t = j -1; j <= j + 1; j++)
-                        {
-
-                            mine[i][j] = 1;
-                        }
-
-                    }
-                }
-            }
-
-        }
-
+        int[] pastCol = new int[this.col];
+        int[] pastRow = new int[this.row];
 
         while (isBomb)
         {
@@ -77,41 +144,21 @@ public class MineSweeper {
             }
             else
             {
-                System.out.println("Girilen değer:  " + field[row][col]);
-                for(int i = col -1; i <= col + 1; i++)
+                for(int i = 0; i < this.col; i++)
                 {
-                    for(int j = row -1; j <= row + 1; j++)
+                    for(int j = 0; j < this.row; j++)
                     {
-
-                        if(field[row][col] != mine[i][j])
+                        if(i == col && j == row)
                         {
-                            if(mine[i][j] == -1)
-                            {
-
-                            }
+                            System.out.print(mine[i][j]);
+                        }
+                        else
+                        {
+                            System.out.print(" - ");
                         }
                     }
-
+                    System.out.println();
                 }
-            }
-
-            for(int i = 0; i < this.col; i++)
-            {
-                for(int j = 0; j < this.row; j++)
-                {
-                    /*
-                    if (field[i][j] == -1)
-                    {
-                        System.out.print(" " + field[i][j] + " ");
-                    }
-                    else {
-                        System.out.print(" - ");
-                    }
-
-                     */
-                    System.out.print(" " + field[i][j] + " ");
-                }
-                System.out.println();
             }
         }
 
@@ -135,6 +182,7 @@ public class MineSweeper {
     {
         Random random = new Random();
         this.mine = new int[this.col][this.row];
+        copyField();
 
         int calMine = (this.col * this.row)/4;
         while (calMine > 0)
@@ -147,11 +195,22 @@ public class MineSweeper {
                     if(this.mine[i][j] == randomMine)
                     {
                         this.mine[i][j] = -1;
-
                     }
                 }
             }
             calMine --;
+        }
+        return mine;
+    }
+
+    public int[][] copyField()
+    {
+        for(int i = 0; i < this.col; i++)
+        {
+            for(int j = 0; j < this.row; j++)
+            {
+                mine[i][j] = field[i][j];
+            }
         }
         return mine;
     }
