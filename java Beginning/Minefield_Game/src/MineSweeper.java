@@ -18,7 +18,7 @@ public class MineSweeper {
     public void run()
     {
         Scanner input = new Scanner(System.in);
-        int col,row;
+        int currentRow,currentCol;
         boolean isBomb = true;
 
         calField();
@@ -129,15 +129,20 @@ public class MineSweeper {
 
         int[] pastCol = new int[this.col];
         int[] pastRow = new int[this.row];
+        int counter = 0;
 
         while (isBomb)
         {
             System.out.print("Satır sayısını girin: ");
-            row = input.nextInt();
+            currentCol = input.nextInt();
             System.out.print("Sütun sayısını girin: ");
-            col = input.nextInt();
+            currentRow = input.nextInt();
 
-            if(mine[row][col] == -1)
+            pastCol[counter] = currentCol;
+            pastRow[counter] = currentRow;
+            counter ++;
+
+            if(mine[currentRow][currentRow] == -1)
             {
                 System.out.println("Mayın Patladı ! Oyun bitti. ");
                 isBomb = false;
@@ -148,9 +153,13 @@ public class MineSweeper {
                 {
                     for(int j = 0; j < this.row; j++)
                     {
-                        if(i == col && j == row)
+                        if(i == currentRow && j == currentRow)
                         {
-                            System.out.print(mine[i][j]);
+                                System.out.print(" " + mine[currentRow][currentCol] + " ");
+                        }
+                        else if(containsPastMove(pastRow, pastCol, i, j))
+                        {
+                            System.out.print(" " + mine[i][j] + " ");
                         }
                         else
                         {
@@ -161,7 +170,14 @@ public class MineSweeper {
                 }
             }
         }
-
+    }
+    private boolean containsPastMove(int[] pastRow, int[] pastCol, int row, int col) {
+        for (int i = 0; i < pastRow.length; i++) {
+            if (pastRow[i] == row && pastCol[i] == col) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int[][] calField()
