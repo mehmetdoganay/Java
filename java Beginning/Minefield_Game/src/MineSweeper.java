@@ -23,35 +23,10 @@ public class MineSweeper {
 
         calField();
         calMine();
-        for(int i = 0; i < this.col; i++)
-        {
-            for(int j = 0; j < this.row; j++)
-            {
-                System.out.print(" " + mine[i][j] + " ");
-            }
-            System.out.println();
-        }
 
         System.out.println("Mayın Tarlası oyununa hoş gelidiniz.");
 
-        for(int i = 0 ; i <= this.col -1; i++)
-        {
-            for(int j = 0 ; j <= this.row -1; j++)
-            {
-                if(mine[i][j] == -1)
-                {
-                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
-                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
-                        {
-                            if (mine[k][t] != -1) {
-                                mine[k][t] = 1;
-                            }
-                        }
 
-                    }
-                }
-            }
-        }
 
         for(int i = 0; i < this.col; i++)
         {
@@ -64,39 +39,7 @@ public class MineSweeper {
         }
         System.out.println();
 
-        for(int i = 0 ; i <= this.col -1; i++)
-        {
-            for(int j = 0 ; j <= this.row -1; j++)
-            {
-                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
-                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
-                        {
-                            if (mine[k][t] != -1) {
-                                mine[k][t] = 0;
-                            }
-                        }
-                    }
-            }
-        }
-
-        for(int i = 0 ; i <= this.col -1; i++)
-        {
-            for(int j = 0 ; j <= this.row -1; j++)
-            {
-                if(mine[i][j] == -1)
-                {
-                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
-                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
-                        {
-                            if (mine[k][t] != -1) {
-                                mine[k][t] ++;
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
+        updateMineCounts(mine);
 
         for(int i = 0; i < this.col; i++)
         {
@@ -135,8 +78,10 @@ public class MineSweeper {
         {
             System.out.print("Satır sayısını girin: ");
             currentCol = input.nextInt();
+
             System.out.print("Sütun sayısını girin: ");
             currentRow = input.nextInt();
+
 
             pastCol[counter] = currentCol;
             pastRow[counter] = currentRow;
@@ -167,6 +112,43 @@ public class MineSweeper {
                         }
                     }
                     System.out.println();
+                }
+            }
+        }
+    }
+
+    public void updateMineCounts(int[][] mine)
+    {
+        for(int i = 0 ; i <= this.col -1; i++)
+        {
+            for(int j = 0 ; j <= this.row -1; j++)
+            {
+                for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
+                    for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
+                    {
+                        if (mine[k][t] != -1) {
+                            mine[k][t] = 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        for(int i = 0 ; i <= this.col -1; i++)
+        {
+            for(int j = 0 ; j <= this.row -1; j++)
+            {
+                if(mine[i][j] == -1)
+                {
+                    for (int k = Math.max(0, i - 1); k <= Math.min(this.col - 1, i + 1); k++) {
+                        for (int t = Math.max(0, j - 1); t <= Math.min(this.row - 1, j + 1); t++)
+                        {
+                            if (mine[k][t] != -1) {
+                                mine[k][t] ++;
+                            }
+                        }
+
+                    }
                 }
             }
         }
