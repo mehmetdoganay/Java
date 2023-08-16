@@ -70,41 +70,32 @@ public class MineSweeper {
             System.out.println();
         }
 
-        int[] pastCol = new int[this.col];
-        int[] pastRow = new int[this.row];
-        int counter = 0;
+        int[] pastCol = new int[(this.col * this.row) - (this.col * this.row)/4];
+        int[] pastRow = new int[(this.col * this.row) - (this.col * this.row)/4];
+        int counter = 0, winCount = 0 ;
 
         while (isBomb)
         {
             System.out.print("Satır sayısını girin: ");
-            currentCol = input.nextInt();
-
-            System.out.print("Sütun sayısını girin: ");
             currentRow = input.nextInt();
 
+            System.out.print("Sütun sayısını girin: ");
+            currentCol = input.nextInt();
 
-            pastCol[counter] = currentCol;
             pastRow[counter] = currentRow;
+            pastCol[counter] = currentCol;
             counter ++;
 
-            if(mine[currentRow][currentRow] == -1)
+            if(mine[currentRow][currentCol] == -1)
             {
                 System.out.println("Mayın Patladı ! Oyun bitti. ");
-                isBomb = false;
-            }
-            else
-            {
-                for(int i = 0; i < this.col; i++)
+                for(int i = 0; i < this.row ; i++)
                 {
-                    for(int j = 0; j < this.row; j++)
+                    for(int j = 0; j < this.col; j++)
                     {
-                        if(i == currentRow && j == currentRow)
+                        if(containsPastMove(pastRow, pastCol, i, j))
                         {
-                                System.out.print(" " + mine[currentRow][currentCol] + " ");
-                        }
-                        else if(containsPastMove(pastRow, pastCol, i, j))
-                        {
-                            System.out.print(" " + mine[i][j] + " ");
+                            System.out.print(" * ");
                         }
                         else
                         {
@@ -113,10 +104,54 @@ public class MineSweeper {
                     }
                     System.out.println();
                 }
+                isBomb = false;
+            }
+            else
+            {
+                int a = 0;
+                winCount ++;
+                for(int i = 0; i < this.row ; i++)
+                {
+                    for(int j = 0; j < this.col; j++)
+                    {
+                            if(containsPastMove(pastRow, pastCol, i, j))
+                            {
+                                System.out.print(" " + mine[i][j] + " ");
+                            }
+                            else
+                            {
+                                System.out.print(" - ");
+                            }
+
+                    }
+                    System.out.println();
+                }
+
+                if(winCount == ((this.row * this.col) - ((this.row * this.col)/4)))
+                {
+                    System.out.println("Oyun Kazanıldı.");
+                    for(int i = 0; i < this.col; i++)
+                    {
+                        for(int j = 0; j < this.row; j++)
+                        {
+
+                            if (mine[i][j] == -1)
+                            {
+                                System.out.print(" * ");
+                            }
+                            else {
+                                System.out.print(" - ");
+                            }
+                        }
+                        System.out.println();
+                    }
+                    isBomb = false;
+                }
             }
         }
     }
 
+    //Temas edilen Mayın adedi.
     public void updateMineCounts(int[][] mine)
     {
         for(int i = 0 ; i <= this.col -1; i++)
@@ -153,22 +188,26 @@ public class MineSweeper {
             }
         }
     }
+    // Geçmişe dönük girilen değerleri sorgular.
     private boolean containsPastMove(int[] pastRow, int[] pastCol, int row, int col) {
         for (int i = 0; i < pastRow.length; i++) {
-            if (pastRow[i] == row && pastCol[i] == col) {
+            if(pastRow[i] == 0 && pastCol[i] == 0)
+            {
+                return false;
+            }
+            else if (pastRow[i] == row && pastCol[i] == col) {
                 return true;
             }
         }
         return false;
     }
-
     public int[][] calField()
     {
-        this.field = new int[this.col][this.row];
+        this.field = new int[this.row][this.col];
         int count = 0;
-        for(int i = 0; i < this.col; i++)
+        for(int i = 0; i < this.row; i++)
         {
-            for(int j = 0; j < this.row; j++)
+            for(int j = 0; j < this.col; j++)
             {
                 field[i][j] = count;
                 count ++;
@@ -179,16 +218,16 @@ public class MineSweeper {
     public int[][] calMine()
     {
         Random random = new Random();
-        this.mine = new int[this.col][this.row];
+        this.mine = new int[this.row][this.col];
         copyField();
 
-        int calMine = (this.col * this.row)/4;
+        int calMine = (this.row * this.col)/4;
         while (calMine > 0)
         {
             int randomMine = random.nextInt(this.col * this.row);
-            for(int i = 0; i < col; i++)
+            for(int i = 0; i < row; i++)
             {
-                for (int j = 0; j < row; j++)
+                for (int j = 0; j < col; j++)
                 {
                     if(this.mine[i][j] == randomMine)
                     {
@@ -203,9 +242,9 @@ public class MineSweeper {
 
     public int[][] copyField()
     {
-        for(int i = 0; i < this.col; i++)
+        for(int i = 0; i < this.row; i++)
         {
-            for(int j = 0; j < this.row; j++)
+            for(int j = 0; j < this.col; j++)
             {
                 mine[i][j] = field[i][j];
             }
