@@ -76,44 +76,46 @@ public class MineSweeper {
 
         while (isBomb)
         {
+
             System.out.print("Satır sayısını girin: ");
             currentRow = input.nextInt();
 
             System.out.print("Sütun sayısını girin: ");
             currentCol = input.nextInt();
-
-            pastRow[counter] = currentRow;
-            pastCol[counter] = currentCol;
-            counter ++;
-
-            if(mine[currentRow][currentCol] == -1)
+            if(isContains(this.row,this.col,currentRow,currentCol))
             {
-                System.out.println("Mayın Patladı ! Oyun bitti. ");
-                for(int i = 0; i < this.row ; i++)
+                pastRow[counter] = currentRow;
+                pastCol[counter] = currentCol;
+                counter ++;
+
+                if(mine[currentRow][currentCol] == -1)
                 {
-                    for(int j = 0; j < this.col; j++)
+                    System.out.println("Mayın Patladı ! Oyun bitti. ");
+                    for(int i = 0; i < this.row ; i++)
                     {
-                        if(containsPastMove(pastRow, pastCol, i, j))
+                        for(int j = 0; j < this.col; j++)
                         {
-                            System.out.print(" * ");
+                            if(containsPastMove(pastRow, pastCol, i, j))
+                            {
+                                System.out.print(" * ");
+                            }
+                            else
+                            {
+                                System.out.print(" - ");
+                            }
                         }
-                        else
-                        {
-                            System.out.print(" - ");
-                        }
+                        System.out.println();
                     }
-                    System.out.println();
+                    isBomb = false;
                 }
-                isBomb = false;
-            }
-            else
-            {
-                int a = 0;
-                winCount ++;
-                for(int i = 0; i < this.row ; i++)
+                else
                 {
-                    for(int j = 0; j < this.col; j++)
+                    int a = 0;
+                    winCount ++;
+                    for(int i = 0; i < this.row ; i++)
                     {
+                        for(int j = 0; j < this.col; j++)
+                        {
                             if(containsPastMove(pastRow, pastCol, i, j))
                             {
                                 System.out.print(" " + mine[i][j] + " ");
@@ -123,34 +125,49 @@ public class MineSweeper {
                                 System.out.print(" - ");
                             }
 
-                    }
-                    System.out.println();
-                }
-
-                if(winCount == ((this.row * this.col) - ((this.row * this.col)/4)))
-                {
-                    System.out.println("Oyun Kazanıldı.");
-                    for(int i = 0; i < this.col; i++)
-                    {
-                        for(int j = 0; j < this.row; j++)
-                        {
-
-                            if (mine[i][j] == -1)
-                            {
-                                System.out.print(" * ");
-                            }
-                            else {
-                                System.out.print(" - ");
-                            }
                         }
                         System.out.println();
                     }
-                    isBomb = false;
+
+                    if(winCount == ((this.row * this.col) - ((this.row * this.col)/4)))
+                    {
+                        System.out.println("Oyun Kazanıldı.");
+                        for(int i = 0; i < this.col; i++)
+                        {
+                            for(int j = 0; j < this.row; j++)
+                            {
+
+                                if (mine[i][j] == -1)
+                                {
+                                    System.out.print(" * ");
+                                }
+                                else {
+                                    System.out.print(" - ");
+                                }
+                            }
+                            System.out.println();
+                        }
+                        isBomb = false;
+                    }
                 }
             }
+            else{
+                System.out.println("Girilen değerler değer aralığı dışındadır tekrar değer girin.");
+            }
+
+
         }
     }
 
+
+    public boolean isContains(int pastRow,int pastCol, int currentRow, int currentCol)
+    {
+        if(pastRow >= currentRow  &&  pastCol >= currentCol)
+        {
+            return true;
+        }
+        return false;
+    }
     //Temas edilen Mayın adedi.
     public void updateMineCounts(int[][] mine)
     {
@@ -189,13 +206,9 @@ public class MineSweeper {
         }
     }
     // Geçmişe dönük girilen değerleri sorgular.
-    private boolean containsPastMove(int[] pastRow, int[] pastCol, int row, int col) {
+    public boolean containsPastMove(int[] pastRow, int[] pastCol, int row, int col) {
         for (int i = 0; i < pastRow.length; i++) {
-            if(pastRow[i] == 0 && pastCol[i] == 0)
-            {
-                return false;
-            }
-            else if (pastRow[i] == row && pastCol[i] == col) {
+            if (pastRow[i] == row && pastCol[i] == col) {
                 return true;
             }
         }
