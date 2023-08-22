@@ -17,10 +17,10 @@ public class Match {
         this.maxWeight = maxWeight;
     }
 
+    Random random = new Random();
     void fight() throws InterruptedException {
         if(checkWeight())
         {
-            Random random = new Random();
             for(int i = 1; i < 4; i++)
             {
                 System.out.println("********** " + i + " **********");
@@ -32,8 +32,7 @@ public class Match {
                 boolean punch = random.nextBoolean();
                 int hit = random.nextInt(50);
 
-                System.out.println(this.f1.name+ " is health: \t" + this.f1.health);
-                System.out.println(this.f2.name + " is health: \t"+this.f2.health);
+                healthPrint();
                 time();
                 if(punch)
                 {
@@ -60,9 +59,15 @@ public class Match {
         }
     }
 
+    void healthPrint()
+    {
+        System.out.println(this.f1.name+ " is health: \t" + this.f1.health);
+        System.out.println(this.f2.name + " is health: \t"+this.f2.health);
+    }
     void time() throws InterruptedException {
         Thread.sleep(1000);
     }
+
 
     boolean isCriticalAttack(int attack)
     {

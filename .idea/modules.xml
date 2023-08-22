@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Armstrong_Sayi_Bulma/Armstrong_Sayi_Bulma.iml" filepath="$PROJECT_DIR$/java Beginning/Armstrong_Sayi_Bulma/Armstrong_Sayi_Bulma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/java Beginning/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Arrays_Class_and_Methods/Arrays_Class_and_Methods.iml" filepath="$PROJECT_DIR$/java Beginning/Arrays_Class_and_Methods/Arrays_Class_and_Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/ArtikYilHesaplama/ArtikYilHesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/ArtikYilHesaplama/ArtikYilHesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Asal_Sayi_Bul/Asal_Sayi_Bul.iml" filepath="$PROJECT_DIR$/java Beginning/Asal_Sayi_Bul/Asal_Sayi_Bul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Asal_Sayi_Bul_Recursive_Method/Asal_Sayi_Bul_Recursive_Method.iml" filepath="$PROJECT_DIR$/java Beginning/Asal_Sayi_Bul_Recursive_Method/Asal_Sayi_Bul_Recursive_Method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Atm_Project/Atm_Project.iml" filepath="$PROJECT_DIR$/java Beginning/Atm_Project/Atm_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Basamak_Sayisi_Hesaplama/Basamak_Sayisi_Hesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/Basamak_Sayisi_Hesaplama/Basamak_Sayisi_Hesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Object_Oriented_Programming/Boxing/Boxing.iml" filepath="$PROJECT_DIR$/Java_Object_Oriented_Programming/Boxing/Boxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/BurcunuOgren/BurcunuOgren.iml" filepath="$PROJECT_DIR$/java Beginning/BurcunuOgren/BurcunuOgren.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Object_Oriented_Programming/Calculate_Salary/Calculate_Salary.iml" filepath="$PROJECT_DIR$/Java_Object_Oriented_Programming/Calculate_Salary/Calculate_Salary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/CinZodyagi/CinZodyagi.iml" filepath="$PROJECT_DIR$/java Beginning/CinZodyagi/CinZodyagi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Object_Oriented_Programming/Classes/Classes.iml" filepath="$PROJECT_DIR$/Java_Object_Oriented_Programming/Classes/Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/DaireninAlaniniVeCevresiniHesaplayanUygulama/DaireninAlaniniVeCevresiniHesaplayanUygulama.iml" filepath="$PROJECT_DIR$/java Beginning/DaireninAlaniniVeCevresiniHesaplayanUygulama/DaireninAlaniniVeCevresiniHesaplayanUygulama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Desene_Uygun_Metod/Desene_Uygun_Metod.iml" filepath="$PROJECT_DIR$/java Beginning/Desene_Uygun_Metod/Desene_Uygun_Metod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Dimensional_Array_Create_B/Dimensional_Array_Create_B.iml" filepath="$PROJECT_DIR$/java Beginning/Dimensional_Array_Create_B/Dimensional_Array_Create_B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Ebob_Ekok_Bul/Ebob_Ekok_Bul.iml" filepath="$PROJECT_DIR$/java Beginning/Ebob_Ekok_Bul/Ebob_Ekok_Bul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Enbuyuk_Enkucuk_Sayilari_Bul/Enbuyuk_Enkucuk_Sayilari_Bul.iml" filepath="$PROJECT_DIR$/java Beginning/Enbuyuk_Enkucuk_Sayilari_Bul/Enbuyuk_Enkucuk_Sayilari_Bul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Fibonacci_Serisi_Bul/Fibonacci_Serisi_Bul.iml" filepath="$PROJECT_DIR$/java Beginning/Fibonacci_Serisi_Bul/Fibonacci_Serisi_Bul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Find_Matris_Transpose/Find_Matris_Transpose.iml" filepath="$PROJECT_DIR$/java Beginning/Find_Matris_Transpose/Find_Matris_Transpose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Find_Max_Min_Number/Find_Max_Min_Number.iml" filepath="$PROJECT_DIR$/java Beginning/Find_Max_Min_Number/Find_Max_Min_Number.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Find_Repeat_Numbers/Find_Repeat_Numbers.iml" filepath="$PROJECT_DIR$/java Beginning/Find_Repeat_Numbers/Find_Repeat_Numbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Find_Repeat_Value/Find_Repeat_Value.iml" filepath="$PROJECT_DIR$/java Beginning/Find_Repeat_Value/Find_Repeat_Value.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Foreach_Arrays/Foreach_Arrays.iml" filepath="$PROJECT_DIR$/java Beginning/Foreach_Arrays/Foreach_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Gelismis_Hesap_Makinesi/Gelismis_Hesap_Makinesi.iml" filepath="$PROJECT_DIR$/java Beginning/Gelismis_Hesap_Makinesi/Gelismis_Hesap_Makinesi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Harmonic_mean/Harmonic_mean.iml" filepath="$PROJECT_DIR$/java Beginning/Harmonic_mean/Harmonic_mean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Harmonik_Sayi_Bulma/Harmonik_Sayi_Bulma.iml" filepath="$PROJECT_DIR$/java Beginning/Harmonik_Sayi_Bulma/Harmonik_Sayi_Bulma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/HesapMakinesi/HesapMakinesi.iml" filepath="$PROJECT_DIR$/java Beginning/HesapMakinesi/HesapMakinesi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/HipotenusHesaplama/HipotenusHesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/HipotenusHesaplama/HipotenusHesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_102/Java_102.iml" filepath="$PROJECT_DIR$/Java_102/Java_102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/KdvHesapla/KdvHesapla.iml" filepath="$PROJECT_DIR$/java Beginning/KdvHesapla/KdvHesapla.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/KombinasyonHesaplama/KombinasyonHesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/KombinasyonHesaplama/KombinasyonHesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/KullaniciGirisi/KullaniciGirisi.iml" filepath="$PROJECT_DIR$/java Beginning/KullaniciGirisi/KullaniciGirisi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/ManavKasaUygulamasi/ManavKasaUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/ManavKasaUygulamasi/ManavKasaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/MeteorolojiUygulamasi/MeteorolojiUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/MeteorolojiUygulamasi/MeteorolojiUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Minefield_Game/Minefield_Game.iml" filepath="$PROJECT_DIR$/java Beginning/Minefield_Game/Minefield_Game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Mukemmel_Sayi_Bul/Mukemmel_Sayi_Bul.iml" filepath="$PROJECT_DIR$/java Beginning/Mukemmel_Sayi_Bul/Mukemmel_Sayi_Bul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Multidimensional_Arrays/Multidimensional_Arrays.iml" filepath="$PROJECT_DIR$/java Beginning/Multidimensional_Arrays/Multidimensional_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/NotHesaplamaUygulamasi/NotHesaplamaUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/NotHesaplamaUygulamasi/NotHesaplamaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Number_Guess/Number_Guess.iml" filepath="$PROJECT_DIR$/java Beginning/Number_Guess/Number_Guess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Object_Oriented_Programming/Ogrenci_Bilgi_Sistemi/Ogrenci_Bilgi_Sistemi.iml" filepath="$PROJECT_DIR$/Java_Object_Oriented_Programming/Ogrenci_Bilgi_Sistemi/Ogrenci_Bilgi_Sistemi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Palindrom_Sayi/Palindrom_Sayi.iml" filepath="$PROJECT_DIR$/java Beginning/Palindrom_Sayi/Palindrom_Sayi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Palindromic_Werb/Palindromic_Werb.iml" filepath="$PROJECT_DIR$/java Beginning/Palindromic_Werb/Palindromic_Werb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Recursive_metod_us_alma/Recursive_metod_us_alma.iml" filepath="$PROJECT_DIR$/java Beginning/Recursive_metod_us_alma/Recursive_metod_us_alma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/SayiSiralamaUygulamasi/SayiSiralamaUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/SayiSiralamaUygulamasi/SayiSiralamaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Sort_Array_Elements/Sort_Array_Elements.iml" filepath="$PROJECT_DIR$/java Beginning/Sort_Array_Elements/Sort_Array_Elements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/TaksimetreHesaplamaUygulamasi/TaksimetreHesaplamaUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/TaksimetreHesaplamaUygulamasi/TaksimetreHesaplamaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/UcakBiletiHesaplama/UcakBiletiHesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/UcakBiletiHesaplama/UcakBiletiHesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Ucgen_Yap/Ucgen_Yap.iml" filepath="$PROJECT_DIR$/java Beginning/Ucgen_Yap/Ucgen_Yap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/UsluSayiHesaplamaUygulamasi/UsluSayiHesaplamaUygulamasi.iml" filepath="$PROJECT_DIR$/java Beginning/UsluSayiHesaplamaUygulamasi/UsluSayiHesaplamaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/VucutKitleIndeksiHesaplama/VucutKitleIndeksiHesaplama.iml" filepath="$PROJECT_DIR$/java Beginning/VucutKitleIndeksiHesaplama/VucutKitleIndeksiHesaplama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/Yildizlar_ile_elmas_Yapimi/Yildizlar_ile_elmas_Yapimi.iml" filepath="$PROJECT_DIR$/java Beginning/Yildizlar_ile_elmas_Yapimi/Yildizlar_ile_elmas_Yapimi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/donguOrnek/donguOrnek.iml" filepath="$PROJECT_DIR$/java Beginning/donguOrnek/donguOrnek.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/donguOrnek2/donguOrnek2.iml" filepath="$PROJECT_DIR$/java Beginning/donguOrnek2/donguOrnek2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Beginning/donguOrnek3/donguOrnek3.iml" filepath="$PROJECT_DIR$/java Beginning/donguOrnek3/donguOrnek3.iml" />
+    </modules>
+  </component>
+</project>

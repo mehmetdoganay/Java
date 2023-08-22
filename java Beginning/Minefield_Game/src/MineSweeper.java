@@ -86,7 +86,10 @@ public class MineSweeper {
             {
                 pastRow[counter] = currentRow;
                 pastCol[counter] = currentCol;
+                System.out.println(pastRow[counter]);
+                System.out.println(pastCol[counter]);
                 counter ++;
+
 
                 if(mine[currentRow][currentCol] == -1)
                 {
@@ -110,12 +113,17 @@ public class MineSweeper {
                 }
                 else
                 {
-                    int a = 0;
                     winCount ++;
                     for(int i = 0; i < this.row ; i++)
                     {
                         for(int j = 0; j < this.col; j++)
                         {
+                            for (int k = 0; k < pastRow.length; k++) {
+                                if (pastRow[k] == i && pastCol[k] == j) {
+                                    System.out.println("asd :"+pastRow[k] + " "+  i +" "+  pastCol[k] + " "+ j);
+                                }
+                            }
+                            System.out.println(containsPastMove(pastRow, pastCol, i, j));
                             if(containsPastMove(pastRow, pastCol, i, j))
                             {
                                 System.out.print(" " + mine[i][j] + " ");
@@ -128,6 +136,7 @@ public class MineSweeper {
                         }
                         System.out.println();
                     }
+
 
                     if(winCount == ((this.row * this.col) - ((this.row * this.col)/4)))
                     {
@@ -160,6 +169,7 @@ public class MineSweeper {
     }
 
 
+    // Girilen değerleri kontrol eder.
     public boolean isContains(int pastRow,int pastCol, int currentRow, int currentCol)
     {
         if(pastRow >= currentRow  &&  pastCol >= currentCol)

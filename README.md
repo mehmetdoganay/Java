@@ -73,5 +73,12 @@ Java öğrenme yolculuğum boyunca çeşitli kaynaklardan büyük ölçüde fayd
 
 ## Katkı Sağlama 🌟
 
-Siz de Java öğrenme yolculuğunda iseniz veya projeme katkıda bulunmak isterseniz, pull isteği açmanızı sıcaklıkla bekliyorum.
+Siz de Java öğrenme yolculuğunda iseniz veya projeme katkıda bulunmak isterseniz 
+
+```
+git clone https://github.com/mehmetdoganay/Java.git
+```
+```
+cd Java
+```
 

@@ -27,8 +27,5 @@ public class Main {
                 {891, 439, 423, 823, 1045, 0}
         };
         printArray(matris);
-
-
-
     }
 }
