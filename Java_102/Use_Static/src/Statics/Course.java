@@ -1,3 +1,5 @@
+package Statics;
+
 public class Course {
     public  String name;
     public  String code;

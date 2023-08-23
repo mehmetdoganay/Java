@@ -1,3 +1,5 @@
+package Statics;
+
 public class Main {
     public static void main(String[] args) {
        Course mat = new Course("Matematik","01",77);
