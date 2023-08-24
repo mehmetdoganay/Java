@@ -71,6 +71,21 @@ Java öğrenme sürecim aşağıdaki aşamaları içeriyordu:
 
 Java öğrenme yolculuğum boyunca çeşitli kaynaklardan büyük ölçüde faydalandım—eğitim materyalleri, çevrimiçi öğreticiler ve destekleyici topluluklar, Java programcısı olarak gelişimime katkıda bulundu.
 
+
+Bu projede, XYZ konusunda örnek bir uygulama yer almaktadır.
+
+## <span style="color: green">Klasörler ve İçerikleri</span>
+
+Aşağıda, projenin ana klasörleri ve içerikleri özetlenmiştir:
+
+| Klasör İsmi      | İçerikler                                                                          |
+| ---------------- |------------------------------------------------------------------------------------|
+| [`java Beginning`](java Beginning)     | Java Temelleri ve Başlangıç projeleri içermektedir.                                |
+| [`Java_Object_Oriented_Programming`](Java_Object_Oriented_Programming)   | Nesne Yönelimli Programlama Mantığı kavramak için proje ve Örnek kodlar mevcuttur. |
+| [`Java_102`](Java_102)   | İleri seviye birçok Konu ve projeden oluşmaktadır.                                 |
+
+
+
 ## Katkı Sağlama 🌟
 
 Siz de Java öğrenme yolculuğunda iseniz veya projeme katkıda bulunmak isterseniz 
