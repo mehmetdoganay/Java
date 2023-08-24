@@ -81,7 +81,7 @@ Aşağıda, projenin ana klasörleri ve içerikleri özetlenmiştir:
 | Klasör İsmi      | İçerikler                                                                          |
 | ---------------- |------------------------------------------------------------------------------------|
 | [`java Beginning`](java Beginning)     | Java Temelleri ve Başlangıç projeleri içermektedir.                                |
-| [`Java_Object_Oriented_Programming`](Java_Object_Oriented_Programming)   | Nesne Yönelimli Programlama Mantığı kavramak için proje ve Örnek kodlar mevcuttur. |
+| [`Java_Object_Oriented_Programming`](Java_Object_Oriented_Programming) | Nesne Yönelimli Programlama Mantığı kavramak için proje ve Örnek kodlar mevcuttur. |
 | [`Java_102`](Java_102)   | İleri seviye birçok Konu ve projeden oluşmaktadır.                                 |
 
 
