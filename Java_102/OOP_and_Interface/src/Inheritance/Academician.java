@@ -26,6 +26,14 @@ public class Academician extends Worker{
         this.unvan = unvan;
     }
 
+    // Worker sınıfına ait olan giris metodunun aynısını aynı parametre ile acamedician sınıfında yazarak Overriding(Ezme) işlemi gerçekleştirdik
+    // Override işlemi gerçekleştirildi
+    @Override
+    public void giris()
+    {
+        System.out.println(getUnvan() + " " + getName() + " " + getSurname() +" adlı akademisyen okula giriş yaptı");
+    }
+
     public void derseGir()
     {
         System.out.println(this.getName()  + " " + this.getSurname() + "Derse giriş yaptı");
