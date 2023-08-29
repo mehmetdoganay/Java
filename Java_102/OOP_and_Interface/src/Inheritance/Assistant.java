@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Assistant extends Academician{
+public abstract class Assistant extends Academician{
     private String ofisSaati;
 
     public Assistant(String name, String surname, String email, String phoneNumber, String bolum, String unvan, String ofisSaati) {
@@ -20,4 +20,10 @@ public class Assistant extends Academician{
     {
         System.out.println("Quaiz yapıldı.");
     }
+
+    @Override
+    public void derseGir(String saat){
+        System.out.println(this.getName() + " " + this.getSurname() + " adlı asistan" + saat + "satinde derse giris yaptı");
+    }
+
 }

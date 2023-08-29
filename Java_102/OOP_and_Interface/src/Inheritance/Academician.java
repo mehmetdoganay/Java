@@ -1,6 +1,7 @@
 package Inheritance;
 
-public class Academician extends Worker{
+// Bir metodu abstraction yapılacaksa metodun bulunduğu sınıfta Abstruction olmalı.
+public abstract class Academician extends Worker{
     private String bolum;
     private String unvan;
     public Academician(String name, String surname, String email,String phoneNumber,String bolum,String unvan) {
@@ -34,10 +35,9 @@ public class Academician extends Worker{
         System.out.println(getUnvan() + " " + getName() + " " + getSurname() +" adlı akademisyen okula giriş yaptı");
     }
 
-    public void derseGir()
-    {
-        System.out.println(this.getName()  + " " + this.getSurname() + "Derse giriş yaptı");
-    }
+    // Abstruction metodların bodysi boştur.
+    public abstract void derseGir(String girisSaat);
+
 
     public void print()
     {

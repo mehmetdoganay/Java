@@ -28,4 +28,17 @@ public class Lecturer extends  Academician{
     }
 
 
+    // Eğer kalıtım aldığın sınıf bir Abstruction ise Kalıtım aldığın sınıf içerisindeki metodları Override Etmek zorundasın
+    // Örnek Aşşağıda
+    // Academician sınıfı bir Abstruction sınıf yani ana sınıf .
+    // Lecturer sınıfı Academician sınıfında kalıtım alıyor.
+    // Ve Academician sınıfında bulunan içi boş olan bodysi olamyan derseGir() metodunu Overriding etmek zorundadır.
+    // Çünkü derseGir() Metodunun amacaı Academician sınıfından kalıtım alan alt sınıflara kendine özgü birer metod yazma zorunluluğu sağlamak.
+    @Override
+    public void  derseGir(String saat)
+    {
+        System.out.println(this.getName() + " " + this.getSurname() + " Öğretim görevlisid derse " + saat +" giris yaptı");
+    }
+
+
 }
