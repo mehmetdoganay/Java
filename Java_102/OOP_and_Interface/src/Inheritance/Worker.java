@@ -75,4 +75,12 @@ public class Worker {
         System.out.println("Telefon: " + this.getPhoneNumber());
         System.out.println();
     }
+
+    public static void girisYapanlar(Worker[] loginUser)
+    {
+        for (Worker w: loginUser)
+        {
+            w.giris();
+        }
+    }
 }

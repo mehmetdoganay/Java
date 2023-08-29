@@ -34,4 +34,9 @@ public class Officer extends Worker{
     {
         System.out.println(" Calıştı.");
     }
+
+    public void giris()
+    {
+        System.out.println(getName() + " adlı memur üniveriteye giriş yaptı.");
+    }
 }
