@@ -1,37 +1,89 @@
+import java.util.Scanner;
 public class Player {
-    Inventory inventory;
-    private int damage;
+
+    private String charName;
+    private String playerName;
+    private int id;
     private int health;
     private int money;
-    private String name;
+    private int damage;
 
-    public Player(int damage, int health, int money, String name) {
-        this.damage = damage;
-        this.health = health;
-        this.money = money;
-        this.name = name;
+    public Player(String playerName) {
+        this.playerName = playerName;
+    }
+    public void selectCharacter()
+    {
+        Scanner input = new Scanner(System.in);
+        Samurai samurai = new Samurai();
+        Archer archer = new Archer();
+        Knight knight = new Knight();
+
+        PlayerCharacter[] playerCharacters = {new Samurai(), new Archer(),new Knight()};
+        for (PlayerCharacter players : playerCharacters) {
+            System.out.println("------------------------------------------");
+            System.out.println("Karakter "+ players.getId()+ " - " +players.getCharName() + " " +
+                    "\t " + "Hasar: "+ players.getDamage() + " - " +
+                    "\t " + "Sağlık: " +players.getHealth() + " - " +
+                    "\t " + "Para: " +players.getMoney());
+        }
+
+        int selectCharacter = input.nextInt();
+        switch (selectCharacter){
+            case 1:
+                initPlayer(new Samurai());
+                break;
+            case 2:
+                initPlayer(new Archer());
+                break;
+            case 3 :
+                initPlayer(new Knight());
+                break;
+            default:
+                initPlayer(new Samurai());
+                break;
+        }
+        System.out.println("Seçilen Karakter.");
+        System.out.println("İsim: \t" + this.getCharName() + " \t Hasar: \t" + this.getDamage() + " \t Sağlık: \t" + this.getHealth()+ " \t Para: \t" + this.getMoney() );
+    }
+    public void initPlayer(PlayerCharacter playerCharacter)
+    {
+        this.setId(playerCharacter.getId());
+        this.setCharName(playerCharacter.getCharName());
+        this.setDamage(playerCharacter.getDamage());
+        this.setHealth(playerCharacter.getHealth());
+        this.setMoney(playerCharacter.getMoney());
+
+    }
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public Player(String name ) {
-
-        this.name = name;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
-
-    public int getDamage() {
-        return damage;
+    public String getCharName() {
+        return charName;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
+    public void setCharName(String charName) {
+        this.charName = charName;
     }
 
-    public int getHealthy() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getHealth() {
         return health;
     }
 
-    public void setHealthy(int healthy) {
-        this.health = healthy;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getMoney() {
@@ -42,34 +94,11 @@ public class Player {
         this.money = money;
     }
 
-    public String getName() {
-        return name;
+    public int getDamage() {
+        return damage;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void selectChar(int selectChar){
-
-        switch (selectChar)
-        {
-            case 1:
-                Ninja ninja = new Ninja(this.name,5,15,20);
-                break;
-            case 2:
-                Okcu okcu = new Okcu(this.name,7,13,20);
-                break;
-            case 3:
-                Sovalye sovalye = new Sovalye(this.name,5,20,20);
-                break;
-            case 4:
-                Buyucu buyucu = new Buyucu(this.name,10,9,20);
-                break;
-            default:
-                System.out.println("Yanlış bir giriş yaptın tekrar dene");
-
-        }
-
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 }
