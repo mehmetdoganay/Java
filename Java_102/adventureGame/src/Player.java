@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.SortedMap;
+
 public class Player {
 
     private String charName;
@@ -7,6 +9,7 @@ public class Player {
     private int health;
     private int money;
     private int damage;
+    Scanner input = new Scanner(System.in);
 
     public Player(String playerName) {
         this.playerName = playerName;
@@ -20,12 +23,14 @@ public class Player {
 
         PlayerCharacter[] playerCharacters = {new Samurai(), new Archer(),new Knight()};
         for (PlayerCharacter players : playerCharacters) {
-            System.out.println("------------------------------------------");
-            System.out.println("Karakter "+ players.getId()+ " - " +players.getCharName() + " " +
-                    "\t " + "Hasar: "+ players.getDamage() + " - " +
-                    "\t " + "Sağlık: " +players.getHealth() + " - " +
-                    "\t " + "Para: " +players.getMoney());
+            System.out.println("---------------------------------------------------------");
+            System.out.println("Karakter "+ players.getId()+ " | " +players.getCharName() + " | " +
+                     "Hasar: "+ players.getDamage() + " | " +
+                     "Sağlık: " + players.getHealth() + " | " +
+                     "Para: " + players.getMoney() +
+                     " | ");
         }
+        System.out.println("---------------------------------------------------------");
 
         int selectCharacter = input.nextInt();
         switch (selectCharacter){
@@ -52,8 +57,9 @@ public class Player {
         this.setDamage(playerCharacter.getDamage());
         this.setHealth(playerCharacter.getHealth());
         this.setMoney(playerCharacter.getMoney());
-
     }
+
+
     public String getPlayerName() {
         return playerName;
     }
