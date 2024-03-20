@@ -20,8 +20,10 @@ public class Player {
         Samurai samurai = new Samurai();
         Archer archer = new Archer();
         Knight knight = new Knight();
+        Wizard wizard = new Wizard();
 
-        PlayerCharacter[] playerCharacters = {new Samurai(), new Archer(),new Knight()};
+
+        PlayerCharacter[] playerCharacters = {new Samurai(), new Archer(),new Knight(),new Wizard()};
         for (PlayerCharacter players : playerCharacters) {
             System.out.println("---------------------------------------------------------");
             System.out.println("Karakter "+ players.getId()+ " | " +players.getCharName() + " | " +
@@ -42,6 +44,9 @@ public class Player {
                 break;
             case 3 :
                 initPlayer(new Knight());
+                break;
+            case 4 :
+                initPlayer(new Wizard());
                 break;
             default:
                 initPlayer(new Samurai());

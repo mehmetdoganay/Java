@@ -19,16 +19,19 @@ public class Game {
             System.out.println("Lokasyonlar");
             System.out.println("1 - Güvenli Ev");
             System.out.println("2 - Mağaza");
+            System.out.println("3 - Savaş");
             System.out.print("Gitmek istediğin bölgeyi seç: ");
             int selectLoc = input.nextInt();
             switch (selectLoc)
             {
                 case 1:
-                    location = new SafeHouse(player );
+                    location = new SafeHouse(player);
                     break;
                 case 2:
                     location = new ToolStore(player);
                     break;
+                case 3:
+                    location = new BattleLocation(player);
                 default:
                     location = new SafeHouse(player );
             }
