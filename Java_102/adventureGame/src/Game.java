@@ -1,3 +1,9 @@
+import com.sun.jdi.Location;
+import location.BattleLocation;
+import location.SafeHouse;
+import location.ToolStore;
+import player.Player;
+
 import java.util.Scanner;
 
 public class Game {
@@ -8,7 +14,7 @@ public class Game {
         System.out.print("Karakter ismi giriniz: ");
         String charName = input.nextLine();
 
-        Player player = new Player(charName);
+        Player player = new Player();
         System.out.println("Güzel bir isim seçimi " + player.getPlayerName());
         System.out.println("Artık sana uygun bir Karakter seçmeye hazırsın.");
         player.selectCharacter();
@@ -25,15 +31,16 @@ public class Game {
             switch (selectLoc)
             {
                 case 1:
-                    location = new SafeHouse(player);
+                    location = new Location(player);
                     break;
                 case 2:
                     location = new ToolStore(player);
                     break;
                 case 3:
                     location = new BattleLocation(player);
+                    break;
                 default:
-                    location = new SafeHouse(player );
+                    location = new SafeHouse(player);
             }
             if(!location.onLocation())
             {
