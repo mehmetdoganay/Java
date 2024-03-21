@@ -1,9 +1,8 @@
-import com.sun.jdi.Location;
 import location.BattleLocation;
 import location.SafeHouse;
 import location.ToolStore;
 import player.Player;
-
+import location.Location;
 import java.util.Scanner;
 
 public class Game {
@@ -31,7 +30,7 @@ public class Game {
             switch (selectLoc)
             {
                 case 1:
-                    location = new Location(player);
+                    location = new SafeHouse(player);
                     break;
                 case 2:
                     location = new ToolStore(player);

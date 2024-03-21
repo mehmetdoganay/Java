@@ -9,7 +9,7 @@ public class NormalLocation extends Location {
         super(player, locationName);
     }
     @Override
-    boolean onLocation() {
+    public boolean onLocation() {
         return true;
     }
 }

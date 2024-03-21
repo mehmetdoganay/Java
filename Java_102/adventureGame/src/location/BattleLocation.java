@@ -1,6 +1,5 @@
 package location;
 
-import com.sun.jdi.Location;
 import player.*;
 
 import java.util.Random;
@@ -15,7 +14,7 @@ public  class BattleLocation extends Location {
     }
 
     @Override
-    boolean onLocation() {
+    public boolean onLocation() {
         selectBattleLocation();
         return true;
     }
